@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Erick Pradhan,Papit Ghimire,Shahil Basnet,Subin Sapkota">
+        <meta name="description" content="WATCHGALORE WEBSITE">
+        <meta name="keywords" content="watches,HTML,css,SEO,luxury,affordable">
+        <link rel="stylesheet" href="../../stylesheets/style.css">
+        <link rel="icon" type="image/x-icon" href="../../assets/android-chrome-512x512.png" class="icon1">
+        <title>Apple Watch</title>
+        <style>
+            header{
+                margin:3px 3px;
+                border-radius: 3px;
+            }
+            body{
+                background-color: #f3f2f2;
+            }
+            .icon1{
+                filter: hsl(0, 0%, 100%);
+            }
+            .prev_page  a:hover{
+                color: #c3a07d;
+            }
+            tr{
+                padding-left: 20px;
+            }
+            ul{
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+            <header>
+                    <img class="logo" src="../../assets/photowatch galore.png" alt="watch" style="width: 150px; height: auto;border-radius: 5px;"><!--Inline css here because if we use the logo somewhere else the dimensions may not be same-->
+                    <nav>
+                        <div class="navigation_bar">
+                            <div class="nav_item "><a href="../../index.html">Home</a></div>
+                            <div class="nav_item current_page"><a href="../product.html">Products</a></div>
+                            <div class="nav_item"><a href="../blog.html">Blog</a></div>
+                            <div class="nav_item"><a href="../research.html">Research</a></div>
+                            <div class="nav_item"><a href="../aboutUs.html">About Us</a></div>
+                        </div>
+                    </nav>
+                    <a href="../contactus.html" style="margin-right: 10px;"><button class="btn_login">Contact us</button></a>
+            </header>
+            <section class="prev_page">
+                <nav style="margin:20px">
+                    <p>&lt;<a href="../smartProducts.html"> Back to products</a> </p>
+                </nav>
+            </section>
+            <section>
+                <div class="specification_container">
+                    <div class="image_card">
+                        <img src="../../assets/productImages/product1s.png">
+                    </div>
+                    <div class="specifications">
+                        <table>
+                            <tr>
+                                <td>
+                                <h1 style="font-family: 'Poppins-Medium';font-size: 35px;margin: 5px 10px;">Apple Watch</h1>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <p style="font-family: 'Poppins-Light';opacity: 0.6;">Smart watch</p><br>
+                                <div class="star-rating" style="font-size: 25px;">
+                                    ★★★★☆ <!-- 4 out of 5 stars -->
+                                    <span class="review_toggle" onclick="reviewToggle()" id="rev_button">REVIEWS(2000)&#x2B9F; </span>                                </div>
+                                </td>  
+                            </tr>
+                            <tr>
+                                <td>
+                                <p style="padding:15px 0 0 5px;font-size: 25px;">NPR <del>180000</del></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                <ul class="colors">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td style="padding-left:10px ;">QUANTITY<input type="number" style="width: 40px;"></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button style="margin: 40px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="description">
+                                        <span>Brand: <a href="https://www.apple.com/watch/" target="_blank">Apple &#8690;</a></span>
+                                        <span>Colors:<span class="det"> White</span></span>
+                                        <span>Dimensions(width x height)<span class="det"> 41mmx45mm</span></span>
+                                        <span>Water resistance:<span class="det"> 40m</span></span>
+                                        <span>Materials:<span class="det"> Rubber, Platinum</span></span>
+                                        <span>Country of origin:<span class="det"> USA</span></span>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="review_section"> <!--REVIEW SECTION BOX-->
+                <div class="review_box hidden" id="toggle">
+                    <div class="left_side">
+                        <div class="heading"><h1>Customer rating</h1></div>
+                        
+                        <div class="avg_rating">
+                            <div class="rating">★★★★☆</div> <div class="rating_num">4 out of 5</div>
+                        </div>
+                        <div class="rev">200 Reviews</div>
+                        <div class="rating_categories">
+                            <div class="rat_box">
+                                <div class="rate_text"><h4>5 stars</h4></div>
+                                <div class="rate_percent">
+                                    <div class="rate_progress" style="width: 96%;" ></div>
+                                </div>
+                                <div class="rate_text amount"><h4>192</h4></div>
+                            </div>
+                            <div class="rat_box">
+                                <div class="rate_text"><h4>4 stars</h4></div>
+                                <div class="rate_percent">
+                                    <div class="rate_progress" style="width: 4%;" ></div>
+                                </div>
+                                <div class="rate_text amount"><h4>8</h4></div>
+                            </div>
+                            <div class="rat_box">
+                                <div class="rate_text"><h4>3 stars</h4></div>
+                                <div class="rate_percent">
+                                    <div class="rate_progress" style="width: 00%;" ></div>
+                                </div>
+                                <div class="rate_text amount"><h4>0</h4></div>
+                            </div>
+                            <div class="rat_box">
+                                <div class="rate_text"><h4>2 stars</h4></div>
+                                <div class="rate_percent">
+                                    <div class="rate_progress" style="width: 0%;" ></div>
+                                </div>
+                                <div class="rate_text amount"><h4>0</h4></div>
+                            </div>
+                            <div class="rat_box">
+                                <div class="rate_text"><h4>1 star</h4></div>
+                                <div class="rate_percent" style="margin-left: 25px;">
+                                    <div class="rate_progress" style="width: 0%;" ></div>
+                                </div>
+                                <div class="rate_text amount"><h4>1</h4></div>
+                            </div>
+                        </div>
+                        <div class="user_review">
+                            <form onsubmit="validateReview()">
+                                <label style="font-size: 20px;">Write a review</label><br>
+                                <textarea cols="32" id="message" placeholder="Write your review here..." style="width: 100%; height: 100px;"></textarea><br>
+                                <input type="submit" value="Review" class="submit1" >
+                            </form>
+                        </div>
+                    </div>
+                    <div class="right_side">
+                        <div class="heading"><h1>Customer reviews</h1><button onclick="reviewToggle()">&#120;</button></div>
+                        <div class="comments">
+                            <div class="user1_cmt">
+                                <div class="user_img">
+                                    <img src="../../assets/icons/user-icon-male.png" alt="user1">
+                                    <div class="username">
+                                        JOHN
+                                        <div class="rating">★★★★★</div>
+                                        <div class="rating title">I LOVE THIS WATCH!!!</div>    
+                                    </div>
+                                </div>
+                                <div class="user_review_text">
+                                    <p>This watch is so fancy, I feel like I should be in a movie about time travel.
+                                         Sadly, it doesn't let me rewind to fix my bad life choices. Still looks amazing though!</p>
+                                        
+                                </div>
+                            </div>
+                            <div class="user1_cmt">
+                                <div class="user_img">
+                                    <img src="../../assets/icons/user-icon-mir1.jpg" alt="user1">
+                                    <div class="username">
+                                        Kaleem Bhaiya
+                                        <div class="rating">★☆☆☆☆</div>
+                                        <div class="rating title">If You Want to Know the Time, Just Use Your Phone</div>    
+                                    </div>
+                                </div>
+                                <div class="user_review_text">
+                                    <p>I bought this watch, then realized my phone also tells time.
+                                         Now I have a very expensive wrist decoration</p>
+                                        
+                                </div>
+                            </div>
+                            <div class="user1_cmt">
+                                <div class="user_img">
+                                    <img src="../../assets/icons/user-icon-xdd.png" alt="user1">
+                                    <div class="username">
+                                        Malzaharing
+                                        <div class="rating">★★★★☆</div>
+                                        <div class="rating title">Finally, I Know What Time It Is!</div>    
+                                    </div>
+                                </div>
+                                <div class="user_review_text">
+                                    <p>Before this watch, I was always late.
+                                         Now I'm still late, but at least I know exactly how late I am. 10/10 would recommend!</p>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </body>
+    <script src="../../scripts/script.js"></script><!--EXTERNAL JS FOR REVIEW-->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="../../index.html"><img src="../../assets/LOGOWATCHGALORE.png"></a></li>
+                        <li style="color: #f3f2f2;margin: 5px;">Watch Galore &#169;</li>
+                        <li style="color: #f3f2f2;margin: 5px;">All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="../aboutUs.html">About us</a></li>
+                        <li><a href="../contactus.html">Contact us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AxcMteJkL/" target="_blank"><img src="../assets/icons/facebook.png"> </a>
+                        <a href="https://www.instagram.com/watchgalore?igsh=MXc4Zmt0aW83bnVkcQ==" target="_blank"><img src="../assets/icons/insta.png"></a>
+                        <a href="https://youtube.com/@watchgalore?si=-qo94sligvZuEMcn" target="_blank"><img src="../assets/icons/youtube.png"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Erick Pradhan,Papit Ghimire,Shahil Basnet,Subin Sapkota">
+        <meta name="description" content="WATCHGALORE WEBSITE">
+        <meta name="keywords" content="watches,HTML,css,SEO,luxury,affordable">
+        <link rel="stylesheet" href="../stylesheets/style.css"><!--Line 761-1099-->
+        <link rel="icon" type="image/x-icon" href="../assets/android-chrome-512x512.png" class="icon1">
+        <title>About Us</title>
+        <style>
+            header{
+                position: sticky;
+                top: 0;
+                left: 0;
+                margin:3px 3px;
+                border-radius: 3px;
+                z-index: 100;
+            
+            }
+            body{
+                background-color: #f3f2f2;
+            }
+            .icon1{
+                filter: hsl(0, 0%, 100%);
+            }
+            section{
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            section h1,h2{
+                font-family: 'Poppins-Medium';
+                font-size: 26px;
+                text-align: center;
+            }
+            section p{
+                font-family: 'Poppins-Medium';
+                font-size: 15px;
+                text-align: center;
+                line-height: 1.5cm;
+            }
+            .about{
+                width:85%;
+
+                background-color: #c3a07d01;
+            }
+            .about a:hover{
+                font-size: 18px;
+                color: #c3a07d;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="../html/index.html"><img class="logo" src="../assets/photowatch galore.png" alt="watch" style="width: 150px; height: auto;border-radius: 5px;"></a><!--Might change logo later-->
+            <nav>
+                <div class="navigation_bar">
+                    <div class="nav_item "><a href="../index.html">Home</a></div>
+                    <div class="nav_item"><a href="../html/product.html">Products</a></div>
+                    <div class="nav_item"><a href="../html/blog.html">Blog</a></div>
+                    <div class="nav_item"><a href="../html/research.html">Research</a></div>
+                    <div class="nav_item current_page"><a href="../html/aboutUs.html">About Us</a></div>
+                </div>
+            </nav>
+            <a href="./contactus.html" style="margin-right: 10px;"><button class="btn_login">Contact us</button></a>
+        </header>
+        <section>
+            <div class="about">
+                <h1><u>ABOUT US</u></h1>
+                <p>Welcome to Watch Galore, your trusted destination for stylish and quality timepieces.<br>
+                    As our name suggests we are passionate about bringing you a wide range of watches that combine elegance, functionality, and reliability.Whether you're looking for a classic design, a modern statement piece, or the perfect gift, we've got something for everyone.
+                     At Watch Galore, we believe a watch is more than just an accessory -- it's a reflection of your personality and style.Our goal is to make finding your perfect watch simple and enjoyable.<br>
+                     Thank you for choosing Watch Galore to be part of your timeless journey!
+                </p><br><hr><br>
+                <h2>
+                    OUR TEAM
+                </h2>
+                <p>
+                    Behind Watch Galore is a team of small but passionate individuals united by their love for watches.<br> We work tirelessly to source the best designs, stay ahead of trends, and ensure every customer finds exactly what they're looking for.
+
+                    Customer satisfaction is at the heart of what we do. Our team is committed to delivering exceptional service, guiding you through your purchase journey, and answering any questions you may have. With years of experience and an eye for detail, we're here to help you make the right choice.
+
+                    <br>Thank you for choosing Watch Galore to be a part of your timeless journey!
+                </p><br><hr><br>
+            </div>
+        </section>
+        <section style="margin-bottom: 50px ;">
+            <h1>MEET OUR MEMBERS</h1>
+        </section>
+        <div class="members">
+            <div class="mem1" onclick="displayCV('shahil')">
+                <img src="../assets/members/shahil.jpg" >
+
+                <div class="name_mem">
+                    <p>Shahil Basnet</p>
+                </div>
+            </div>
+            <div class="mem1" onclick="displayCV('erick')">
+                <img src="../assets/members/erick.jpg" >
+
+                <div class="name_mem">
+                    <p>Erick Pradhan</p>
+                </div>
+            </div>
+            <div class="mem1" onclick="displayCV('papit')">
+                <img src="../assets/members/papit.jpg" >
+
+                <div class="name_mem">
+                    <p>Papit Ghimire</p>
+                </div>
+            </div>
+            <div class="mem1" onclick="displayCV('subin')">
+                <img src="../assets/members/subin.jpg" >
+
+                <div class="name_mem">
+                    <p>Subin Sapkota</p>
+                </div>
+            </div>
+        </div><br><br><hr>
+        <div class="cv">
+            <div id="head" style="display: none;"><h1><u>PORTFOLIO</u></h1></div>
+            <iframe src="./cv/shahil.html" id="shahil"></iframe>
+            <iframe src="./cv/erick.html" id="erick"></iframe>
+            <iframe src="./cv/papit.html" id="papit"></iframe>
+            <iframe src="./cv/subin.html" id="subin"></iframe>
+        </div>
+        <section>
+            <div class="about">
+                <h1><u>CONTACT US</u></h1>
+                <p>Have some concerns or any feedback? You could fill out this form.<br><a href="../html/contactus.html">Click me</a>
+                </p><br><hr><br>
+            </div>
+        </section>
+        
+    </body>
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="../index.html"><img src="../assets/LOGOWATCHGALORE.png"></a></li>
+                        <li style="color: #f3f2f2;margin: 5px;">Watch Galore &#169;</li>
+                        <li style="color: #f3f2f2;margin: 5px;">All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./aboutUs.html">About us</a></li>
+                        <li><a href="./contactus.html">Contact us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AxcMteJkL/" target="_blank"><img src="../assets/icons/facebook.png"> </a>
+                        <a href="https://www.instagram.com/watchgalore?igsh=MXc4Zmt0aW83bnVkcQ==" target="_blank"><img src="../assets/icons/insta.png"></a>
+                        <a href="https://youtube.com/@watchgalore?si=-qo94sligvZuEMcn" target="_blank"><img src="../assets/icons/youtube.png"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="../scripts/script.js"></script>
+</html>

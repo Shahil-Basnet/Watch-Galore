@@ -1,0 +1,1185 @@
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins/Poppins-Medium.ttf');
+}
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url("../fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+    font-family: "Alumni-Sans";
+    src: url("../fonts/Alumni-Sans/AlumniSansPinstripe-Regular.ttf");
+}
+@font-face {
+    font-family: "Dosis-bold";
+    src: url("../fonts/Dosis/static/Dosis-Bold.ttf");
+}
+@font-face {
+    font-family: "Dosis-medium";
+    src: url("../fonts/Dosis/static/Dosis-Medium.ttf");
+}
+@font-face {
+    font-family: 'Newsreader-medium';
+    src: url("../fonts/Newsreader/static/Newsreader_24pt-Medium.ttf");
+}
+@font-face {
+    font-family: 'Fancy';
+    src: url("../fonts/Fancy/ImperialScript-Regular.ttf");
+}
+/*different fonts downloaded from google fonts all of them are free :)*/
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins-Medium';
+    scrollbar-color: #c3a07d white;
+    
+}
+a, button,p {
+    font-family:'Open Sans',system-ui,  'Segoe UI',  'Helvetica Neue', sans-serif;   /*place holder font[change as you like}*/
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(21, 24, 26);
+    text-decoration:none;
+}
+/*home  page css */
+header { /* This puts every different element inside header in a flex box.Will lets use manipulate positions of "LOGO","NAV-MENU" and "some sort of button(login form for now)"*/
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px 0px rgba(0,0,0,.3);
+    background-color: #f3f2f2;
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin:3px 3px;
+    border-radius: 3px;
+    z-index: 100;
+}
+.logo {
+    cursor: pointer;
+    margin-left: 0px;
+    filter: grayscale(90);
+}
+
+.navigation_bar{/* every menu item is a flex element now, less annoying than using tables"*/
+    display:flex;
+    gap: 5px;
+}
+
+.nav_item {
+    height: 43px;
+    border-radius: 4px;
+    padding: 9px 20px 0px 20px;
+    font-size: 16px;
+    transition-property: background-color,box-shadow;
+    transition-duration: 500ms,500ms;
+    background-color: rgba(195, 160, 125, 0);
+}
+
+.nav_item:hover {
+    background-color: rgb(195, 160, 125,.8);
+    box-shadow: rgba(60, 64, 67, .9) 0px -1px 0px 0px, rgba(60, 64, 67, 0.9) 0px 1px 0px 0px;
+}
+
+.current_page {
+    box-shadow: rgba(60, 64, 67, .9) 0px -2px 0px 0px, rgba(60, 64, 67, 0.9) 0px 2px 0px 0px;
+}
+/* If any item in navigation bar is hovered the current page will lose its "box-shadow" or "selection effect") */
+.navigation_bar:hover .current_page{
+    box-shadow: rgba(60, 64, 67, 0) 0px -1px 0px 0px, rgba(60, 64, 67, 0) 0px 1px 0px 0px;
+}
+.btn_login{
+    position: relative;
+    color: #444444;
+    padding: 0px 25px;
+    background-color:#c3a07d;
+    height: 25px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 100ms ease-in;
+}
+.btn_login:hover {
+    background-color: rgb(195, 160, 125,.8);
+}
+
+.featured_container {/*contaoiner for featured products*/
+    width: 1300px;
+    max-width: 100%;
+    height: 700px;
+    margin: 20px auto auto auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured_container .featured_products{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.featured_container .featured_products img {/*image selector*/
+    width: 1300px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.featured_container .buttons{
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    left: 5.5%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.featured_container .buttons button{/*buttons selector(obviously)*/
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.286);
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+    cursor:pointer;
+}
+.featured_container .dots{/*sets the dots in flexbox layout*/
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.featured_container .dots li{/*selects each dots*/
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #f3f2f2;
+    margin: 10px;
+    border-radius: 20px;
+    transition: width 500ms, background-color 500ms;
+    cursor: pointer;
+}
+.featured_container .dots li.active{
+    width: 30px;
+    background-color: #c3a07d;
+}
+.banner{
+    position: relative;
+    margin:30px auto;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    width:100%;
+    height:700px;
+    background-color: #0000006d;
+    color: #ebebeb;
+    text-align: center;
+}
+
+@keyframes welcomeAnimation { /* Animation for welcome page soit matches the video intro*/
+    0%{ /*starting point/frame */
+        transform: scale(0.9);
+        opacity: .1;
+    }
+    100%{/* endpoint/frame*/
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.overlay h1{
+    margin-top: 100px;
+    color: #f3f2f2;
+    font-size: 40px;
+    animation: welcomeAnimation 2s ease-out;
+}
+.overlay a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+}
+.overlay a:after {    /*underline*/
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after { /* after hovering*/
+    width: 100%; 
+    left: 0; 
+}
+.banner .tourbillion video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.footer{
+    position: sticky;
+    top: calc( 100% - 400px );
+}
+.footer_container{
+    margin-top: 20px;
+    width: 100%;
+    height:300px;
+    background-color: #192733;
+}
+.row{
+    display: flex;
+	flex-wrap: wrap;
+    justify-content: space-around;
+}
+.row .footer-col ul{
+    list-style: none;
+}
+.footer-col{/*items inside different sections company,social media */
+    width: 25%;
+    padding: 0 15px;
+ }
+ .footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{/*little underline*/
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #c3a07d;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer_container .social_media ul li a{
+    list-style: none;
+    color: white;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #c3a07d;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height:40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col img{
+    width:40%;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+.footer-col .social-links a img{
+    width:40px;
+    height: 40px;
+}
+/*Overview of different pages start here*/
+section.ovr{/*all overviews*/
+    display:flex;
+    max-width: 70%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    row-gap: 10px;
+    gap: 10px;
+}
+.overview{/*overview container*/
+    position: relative;
+    width:45%;
+    height: 350px;
+    border-radius: 12px;
+    background-color: #e4e4e400;
+    transition: all 300ms ease-out;
+    padding: 10px 10px;
+}
+.overview:hover{
+    transform: scale(1.01);
+    box-shadow: 0 5px 100px 5px rgba(0, 0, 0, 0.164);
+}
+
+.overview a {
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    position: relative;
+  }
+.overview a:after {    /*underline*/
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+a:hover:after { /* after hovering*/
+    width: 100%; 
+    left: 0; 
+}
+/* end of css for home page and header/footer*/
+
+/*
+
+    PRODUCT PAGES CSS START
+
+*/
+.prev_page  a:hover{
+    color: #c3a07d;
+}
+
+.gender{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 20px;
+}
+.gender div .text {
+    font-family: 'Poppins-Light';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    color: #ffffff;
+    opacity: 0;
+    letter-spacing: 2x;
+    transition: opacity 300ms ease-in-out;
+}
+.male,.female{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    width: 40%;
+    height: 550px;
+    background-color: #bbbbbb;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.image{
+    transition: all 500ms;
+}
+.male img{
+    max-width: 100%;
+}
+.female img{
+    max-width: 100%;
+    transform: scale(1.5);
+}
+.gender div:hover .image{
+    filter: blur(4px);
+}
+.gender div:hover .text {
+    opacity: 1;
+}
+
+
+.products_container{
+    position: relative;
+    margin:40px auto;
+    margin-bottom: 350px;
+    width:90%;
+    height:1000px;
+    background-color: rgba(10, 10, 10, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:20px;
+}
+.products_container .product_card{
+    height: 645px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.164);/* to distinguish from background*/
+}
+.products_container .product_info{
+    position: absolute;
+    padding:5px 5px;
+    width: 325px;
+    height: 100px;
+    background-color:#f3f2f2;
+}
+.products_container .product_card img{
+    position: relative;
+    display: flex;
+    top:0;
+    left:0;
+    width: 325px;
+    height: max-content;
+    background-color: #c3a07d33;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 300ms;
+
+}
+/* The image kind of zooms in when hovered, looks nice*/
+.products_container .product_card img:hover{
+    transform: scale(1.1);
+}
+.products_container .product_card button{
+    color: #444444;
+    padding: 0px 25px;
+    background-color:#c3a07d;
+    height: 45px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 100ms ease-in;
+    font-family: 'Poppins-Light';
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.164);
+    transition: transform 150ms;
+}
+.products_container .product_card button:hover{
+    background-color:#c3a07d9a;
+    transform: scale(1.05);
+}
+.products_container .product_info h2,p{
+    margin-left: 10px;
+
+}
+.star-rating {
+    display: inline-block;
+    font-size: 20px;
+    color: gold; /* Color for the stars */
+    margin-left:10px ;
+  }
+  /*Specification page start*/
+.specification_container{
+    border-radius: 30px;
+    position: relative;
+    margin:40px 200px;
+    width:80%;
+    height:1000px;
+    background-color:  #17070708;
+    display: flex;
+    overflow: hidden;
+    gap: 10px;
+    box-shadow: 1px 1px 3px 1px rgba(0,0,0,0.2);
+}
+
+.specification_container .image_card{
+    width:45%;
+    background-color: #c3a07d80;
+    display: flex;
+    align-items: center;
+}
+.specification_container .image_card img{
+    width: 70%;
+    margin: 0 auto;
+}
+.specification_container .specifications{
+    width: 65%;
+    
+}
+.specification_container .specifications .star-rating span{
+    margin-left: 5px;
+    color: #000;
+    font-family: 'Poppins-Light';
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.specification_container .colors {
+    display: flex;
+    list-style: none;
+    padding: 15px 0 0 15px;
+    gap:10px;
+    justify-content: flex-start;
+}
+.specification_container .colors li{/*color options **NOT FUNCTIONAL RN** */
+    width:20px;
+    height:20px;
+    margin: 30px 0;
+    border: 3px solid #c3a07d;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: #444444;
+}
+.specification_container .description{
+    position: relative;
+    display: flex;
+    flex-direction:column ;
+    margin: 150px 0 0 15px;
+    row-gap: 20px;
+    font-size: 20px;
+}
+.specification_container .specifications button{
+    color: #444444;
+    padding: 0px 25px;
+    background-color:#c3a07d;
+    height: 50px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 100ms ease-in;
+    font-family: 'Poppins-Light';
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.164);
+    transition: transform 150ms;
+}
+.specification_container .specifications button:hover{
+    background-color:#c3a07d9a;
+    transform: scale(1.05);
+}
+.description a:hover{
+    color: #c3a07d;
+}
+.description span.det {
+    font-family: 'Poppins-Light';
+}
+/*review section */
+.hidden{
+    display: none;
+    opacity:0;
+    z-index: -20;
+}
+.review_box{/*this contains everything about reviews*/
+    width: 60%;
+    height: 80%;
+    background-color: #f3f2f2;
+    position: fixed;
+    transform: translate(30%,-105%);
+    border-radius: 8px;
+    display: flex;
+    box-shadow: 0 0 100px 2000px rgba(0, 0, 0, 0.164);
+}
+/* this side contains review information about product*/
+.left_side{
+    width:40%;
+    height: auto;
+    border-right: 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+.review_box .heading h1{
+    font-size: 30px;
+    font-family: 'Poppins-Light';
+    margin:10px 0 5px 20px;
+}
+.review_box .rev{
+    font-size: 16px;
+    font-family: 'Poppins-Light';
+    margin:5px 0 5px 21px;
+}
+
+
+.avg_rating {
+    display: flex;
+    margin:10px 0 5px 15px;
+}
+.avg_rating .rating{/* STAR*/
+    font-size: 34px;
+    color: gold;
+    line-height: 10px;
+    margin:10px 0 0 0px;
+}
+.avg_rating .rating_num{/*4 OUT OF 5*/
+    font-size: 20px;
+    color: #000;
+    line-height: 18px;
+    margin:10px 0 5px 15px;
+}
+.rating_categories{/*1 TO 5 STARS*/
+    display: flex;
+    width:90%;
+    height:280px;
+    margin:0 0 5px 15px;
+    flex-direction: column;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+/*rating information*/
+.rat_box{/*1 TO 5 STARS CONTAINER*/
+    width: 100%;
+    display: flex;
+    padding: 5px 0 0 5px;
+    margin: 10px 0 0 0;
+}
+.rate_text{
+    top: 13px;
+    font-size: 20px;
+}
+
+.rate_text.amount{
+    margin-left: 15px;
+    font-size: 20px;
+}
+.rate_percent{
+    width: 70%;
+    border:1px solid;
+    border-radius: 2px;
+    height: 30px;
+    margin-left: 10px;
+}
+.rate_progress{
+    height:100%;
+    background-color: goldenrod;
+}
+.user_review{
+    width: 90%;
+    height: 300px;
+    margin:  30px 0 0 15px;
+}
+.user_review .submit1{
+    width:100px;
+    height: auto;
+    margin-top: 10px;
+    font-size: 16px;
+    background-color: #c3a07d;
+    cursor: pointer;
+}
+.user_review .submit1:hover{
+    background-color: #c3a07d93;
+}
+.right_side{/*user reviews*/
+    width:60%;
+    height: auto;
+    overflow: scroll;
+}
+.right_side button{/*CLOSING BUTTON*/
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    border-style: none;
+    background-color: #f3f2f2;
+    padding: 0 0 5px 0;
+    border-radius: 2px;
+    cursor: pointer ;
+    
+}
+.right_side button:hover{
+    background-color:tomato ;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.164);
+}
+.comments{/*the reviews container*/
+    width:90%;
+    margin:20px 0 0 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+.user1_cmt{/*individual reviews*/
+    width: 90%;
+    height: 200px;
+    margin:20px 20px;
+    padding: 20px;
+    background-color: #0000000a;
+
+}
+.user_img{/*profile picture,name and rating*/
+    display: flex;
+}
+.username{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.user_img img{/*circular*/
+    width: 13%;
+    border-radius: 50%;;
+}
+.username  .rating{
+    color:gold;
+}
+.username  .rating.title{
+    font-size: 18px;
+    color: black;
+}
+.user_review_text{
+    width: 80%;
+    margin-left: 13%;
+    height: 90px;
+    overflow: auto;
+}
+/*REVIEWS BUTTON(NOT REALLY BUT ITS A BUTTON)*/
+.star-rating span.review_toggle{
+    cursor: pointer;
+    font-size: 16px;
+}
+.star-rating span.review_toggle:hover{
+    color: goldenrod;
+}
+/*---review section end---*/
+
+
+/*PRODUCT PAGE CSS END*/
+
+
+/* CV and ABOUT US CSS START */
+.container1{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-width: 900px;
+    min-height:1100px;
+    margin:0px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 100px;
+}
+/* Left section of the container */
+.left{
+    display: flex;
+    background-color: #003147;
+  /* background-color: #F2E8D5;*/
+    position: absolute;
+    left: 0px;
+    min-width: 350px;
+    min-height:1200px;   
+    border-right: 3px solid red;
+}
+/* Right section of the container */
+.right{
+   background-color:white; 
+   width: 900px;
+   height: 1200px;
+   margin-left: 350px;
+   
+}
+/* Profile image container - circular shape */
+.imgbx {
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+overflow: hidden;
+margin-top: 30px;
+margin-left: 80px;
+border:2px solid #fff;
+}
+/* Styling for the profile image */
+.imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Styling for the person's name */
+.name{
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:60px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    
+}
+/* Styling for the person's profession */
+.profile-image .profe{
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:37px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    color: lightgray;
+    
+}
+/* Styling for contact information section */
+.contactInfo {
+    position: absolute;
+    top: 330px;
+    width: 100%;
+    padding-left: 30px; 
+    border-radius: 10px; 
+    margin-top: 0px;
+    
+}
+
+h3 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #fff;
+
+}
+
+.contactInfo li {
+    display: flex;
+    margin-bottom: 15px; /* Space between items */
+}
+
+.contactInfo .icon {
+    margin-right: 10px; /* Space between the icon and text */
+    
+}
+
+.contactInfo .icon img {
+    width: 20px; 
+    height: 20px; 
+    
+}
+
+.text {
+    margin-top: 2px;
+    margin-left:10px;
+    font-size: 16px;
+    font-weight: 100px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+/* Styling for the education section */
+
+.education {
+    position: absolute;
+    top: 600px;
+
+    padding: 10px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    overflow-x: scroll;
+}
+
+ 
+.container1 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.education li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;  
+    font-size: 14px;
+}
+
+.education .date {
+    color: skyblue;
+    font-size: 15px; 
+    font-weight: 500;
+    margin-bottom: 5px;  /* Reduced space after the date */
+}
+
+.education .degree {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;  /* Reduced space after the degree */
+}
+
+.education .university {
+    color: lightgray;
+    font-size: 14px;
+    font-weight: 400;
+}
+/* Styling for the language section */
+
+.language {
+    position: absolute;
+    top: 890px;
+    width: 100%;
+    padding: 30px;
+    
+}
+
+.language h3 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.language li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #fff;
+}
+/* Styling for the progress bar container in the language section */
+.language .percent {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.language .progress-bar {
+    height: 100%;
+    background-color: #00b894; 
+    border-radius: 5px;
+    
+}
+
+.language li:hover .progress-bar {
+    background-color: #09a2e3;  /* Change the color on hover */
+}
+/*Right*/
+.profile .title{
+    color:#0a2d3d;
+    font-size: 40px;
+    margin-top:40px;
+    margin-left:50px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.profile p{
+    margin-top: 10px;
+    margin-left:50px;
+    font-size: 20px;
+    padding-right: 20px;
+    color:rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+.text1{
+    
+    margin-left: 50px;
+    font-size: 25px;
+    color:lightgray;
+    
+}
+
+.box1{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.percent1{
+    margin-top: 13px;
+    width: 70%;
+    height: 12px;
+    background-color: white;
+    margin-left: 50px;
+    border-radius: 50px;
+    border:1px solid black;
+}
+.al1{
+    margin-left: 140px;
+}
+.al2{
+    margin-left: 95px;
+}
+.al3{
+    margin-left: 125px;
+}
+.al4{
+    margin-left: 155px;
+}
+.al5{
+    margin-left: 115px;
+}
+.progress-bar1 {
+    height: 100%;
+    background-color: #09a2e3; 
+    border-radius: 5px;
+}
+.progress-bar1:hover {
+    height: 100%;
+    background-color: #d71d48; 
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+/*experience*/
+.year_company{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-left: 50px;
+    color:lightgray;
+}
+.box{
+    display: flex;
+}
+.profession{
+    margin-left: 60px;
+    margin-top: 10px;
+    font-size: 27px;
+    color:skyblue   ;
+    font-weight: 500;
+}
+.profession p{
+    margin-left:0px;
+}
+
+.img1{
+    
+    margin-right:10px;
+}
+.text2{
+    color:black;
+    margin-right: 30px;
+}
+/* members pictures*/
+.members{
+    display: flex;
+    justify-content: space-around;
+}
+.members img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.mem1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.cv{
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    gap: 0px;
+}
+iframe{
+    position: relative;
+    width: 65%;
+    aspect-ratio: 1/1.1;
+    border:none;
+    display: none;
+    margin-top: 0;
+    margin: 0 auto;
+}
+
+
+/* 
+END OF ABOUT US CSS
+*/
+/*blog css starts here*/
+.blog_banner{/*the banner of blog*/
+    width:100%;
+    top:20px;
+    position: relative;
+    height:650px;
+    overflow: hidden;
+    object-fit: cover;
+}
+.blog_banner img{
+    width: 100%;
+    object-fit: cover;
+    filter: blur(3px);
+}
+.greet{/*the galore blog*/
+    display: flex;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    width:35%;
+    height: 300px;
+    background-color: #f3cd8d;
+    z-index: 10;
+    box-shadow: 0 4px 7px 0px rgba(0, 0, 0 ,.18);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.greet p u{
+    font-family: 'Newsreader-medium';
+    font-size: 45px;
+}
+.blog_content{/*main content*/
+    margin: 100px auto;
+}
+article{
+    text-align: start;
+}
+.intro{/*introduction to blog*/
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Poppins-light';
+}
+.intro p{
+    font-size: 21px;
+    font-family: 'Poppins-light';
+    line-height: 60px;
+}
+.intro .intro_paragraph img{
+    float: right;
+    margin:10px;
+    margin-top: 0;
+    max-width: 600px;
+}
+.sub1 p{ /* class for text at right*/
+    margin-right: 30px;
+    font-size: 21px;
+    font-family: 'Poppins-light';
+    line-height: 60px;
+}
+.sub1 img{/*class for image at right*/
+    float: left;
+    margin:10px;
+    margin-top: 0;
+    max-width: 600px;
+    border-radius: 10px;
+}
+.sub2 p{/* class for text at left*/
+    margin-left: 30px;
+    font-size: 21px;
+    font-family: 'Poppins-light';
+    line-height: 60px;
+}
+.sub2 img{/* class for image at left*/
+    float: right;
+    margin:10px;
+    margin-top: 0;
+    max-width: 600px;
+    border-radius: 10px;
+}

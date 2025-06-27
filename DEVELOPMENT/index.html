@@ -1,0 +1,216 @@
+<!DOCTYPE html><!--document type -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Erick Pradhan,Papit Ghimire,Shahil Basnet,Subin Sapkota">
+        <meta name="description" content="WATCHGALORE WEBSITE">
+        <meta name="keywords" content="watches,HTML,css,SEO,luxury,affordable">
+        <link rel="stylesheet" href="./stylesheets/style.css"> <!--Line 46 to 368-->
+        <link rel="icon" type="image/png" href="./assets/android-chrome-512x512.png" class="icon1">
+        <title>Home</title>
+        <style>/*internal css*/
+            h1,u{
+                font-family: 'Alumni-Sans','Open-sans';
+            }
+            header{
+                margin:3px 3px;
+                border-radius: 3px;
+            }
+            body{
+                background-color: #f3f2f2;
+            }
+
+            .featured_heading{
+                font-size: 35px;
+                text-align: center;
+            }
+            p a{
+                font-size: 19px;
+            }
+            .overview p{/* description of all overviews*/
+                font-size: 18px;
+                text-align: center;
+                font-family: 'Poppins-Light';
+                padding: 0 10px;
+            }
+            h2{/*heading of all overviews*/
+                font-size: 25px;
+                text-align: center;
+                font-family: 'Poppins-Medium';
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+                <a href="./index.html"><img class="logo" src="./assets/photowatch galore.png" alt="watch" style="width: 150px; height: auto;border-radius: 5px;"></a><!--Inline css here because if we use the logo somewhere else the dimensions may not be same-->
+                <nav>
+                    <div class="navigation_bar">
+                        <div class="nav_item current_page"><a href="./index.html">Home</a></div>
+                        <div class="nav_item"><a href="./html/product.html">Products</a></div>
+                        <div class="nav_item"><a href="./html/blog.html">Blog</a></div>
+                        <div class="nav_item"><a href="./html/research.html">Research</a></div>
+                        <div class="nav_item"><a href="./html/aboutUs.html">About Us</a></div>
+                    </div>
+                </nav>
+                <a href="./html/contactus.html" style="margin-right: 10px;"><button class="btn_login">Contact us</button></a>
+        </header>
+        
+        <section class="banner"><!--Section for welcome banner-->
+            
+            <div class="tourbillion">
+                <video autoplay muted loop><!--welcome video-->
+                    <source src="./assets/HomepageVideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="overlay">
+                <h1><b>WELCOME TO OUR GALORE</b></h1>
+                <p style="color: #f3f2f2; font-family: Poppins-Light; margin-top: 100px;">Your trusted destination for stylish and quality timepieces.</p><br><hr><br><br>
+                <p style="color: #f3f2f2; font-family: Poppins-Light;">Explore our collection of handcrafted luxury watches designed for every moment.</p>
+                <br><br><br><br><br><br><a href="./html/product.html" style="color: #f3f2f2;font-family: 'Poppins-Light';font-size: 20px;">EXPLORE OUR PRODUCTS</a>
+            </div>
+        </section>
+        <div class="featured_heading"><h1><u>OUR FEATURED PRODUCTS</u></h1></div>
+        <section><!--Section for featured watches-->
+            <div class="featured_container" style="border-radius: 20px;">
+                <div class="featured_products" >
+                        <div class="f_image"><a href="./html/productPages/twintourbilion.html"><img src="./assets/background2.png" alt="Constantine" draggable="false"></a></div>
+                        <div class="f_image"><a href="./html/product.html"><img src="./assets/feature-img-2.jpg" alt="Seiko divers 200m" draggable="false"></a></div>
+                        <div class="f_image"><a href="./html/productPages/superchrono.html"><img src="./assets/feature-img-3.jpg" alt="Beritling divers 200m" draggable="false"></a></div>
+                </div>
+                <div class="buttons"><!--navigation buttons-->
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <ul class="dots"><!--The dots at the bottom of image-->
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </section>
+        <BR>
+        <div class="featured_heading"><h1><u>BROWSE OUR SITE</u></h1></div>
+        <section class="ovr"><!--page overviews starts here> -->
+            <div class="overview"><!--Product page overview-->
+                <h2>Products</h2>
+                <br>
+                <p>
+                    Discover our collection of expertly crafted watches, designed for style, precision, and lasting quality. 
+                    From classic timepieces with timeless appeal to modern designs with innovative features, 
+                    each watch blends elegance
+                    with functionality. Whether you're looking for a statement piece, a durable everyday watch,
+                    or a touch of luxury,
+                    <br>
+                    find the perfect match to complement your style.
+                </p>
+                <br>
+                <p><a href="./html/product.html">EXPLORE OUR PRODUCTS</a></p>
+            </div>
+            <div class="overview"><!--Product page overview-->
+                <h2>Blog</h2>
+                <br>
+                <p>
+                    Explore how technology is reshaping the watch industry, from smartwatches with advanced 
+                    features to blockchain ensuring authenticity. This page delves into the latest trends like 
+                    sustainability, customization, and immersive shopping experiences, highlighting how innovation 
+                    is meeting the growing demands of today's consumers.
+                </p>
+                <br><br>
+                <p><a href="./html/blog.html">READ MORE</a></p>
+            </div>
+            <div class="overview"><!--Product page overview-->
+                <h2>Research</h2>
+                <br>
+                <p>
+                   Discover how we shaped our site to meet the needs of our customers. How and from where we incorporated
+                   the best designs to enhance user experience.
+                   </p>
+                <br>
+                <p><a href="./html/research.html">OUR RESEARCH AND SOURCES</a></p>
+            </div>
+            <div class="overview"><!--Product page overview-->
+                <h2>About us</h2>
+                <br>
+                <p>
+                    Want to know more about our history? How watch galore started its humble journey
+                    to become the go to watch store in the world?<br>
+                    Learn more about the team behind watch galore and our own portfolios.
+                </p>
+                <br>
+                <p><a href="./html/aboutUs.html">MORE ABOUT US</a></p>
+            </div>
+        </section>
+        
+    </body>
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="./index.html"><img src="./assets/LOGOWATCHGALORE.png"></a></li>
+                        <li style="color: #f3f2f2;margin: 5px;">Watch Galore &#169;</li>
+                        <li style="color: #f3f2f2;margin: 5px;">All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./html/aboutUs.html">About us</a></li>
+                        <li><a href="./html/contactus.html">Contact us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links"><!--all are external links to REAL pages-->
+                        <a href="https://www.facebook.com/share/1AxcMteJkL/" target="_blank"><img src="./assets/icons/facebook.png"> </a><!--_blank to open a new tab-->
+                        <a href="https://www.instagram.com/watchgalore?igsh=MXc4Zmt0aW83bnVkcQ==" target="_blank"><img src="./assets/icons/insta.png"></a>
+                        <a href="https://youtube.com/@watchgalore?si=-qo94sligvZuEMcn" target="_blank"><img src="./assets/icons/youtube.png"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let list = document.querySelector('.featured_container .featured_products');//gets the image container
+        let items = document.querySelectorAll('.featured_container .featured_products .f_image');//gets all the elements(images) with class .f_image
+        let next = document.getElementById('next');//gets the '>' button
+        let prev = document.getElementById('prev');//gets the '<' button
+        let dots = document.querySelectorAll('.featured_container .dots li');//gets all elements(dots) inside .dots container
+
+        let active = 0; //index for images (0  =  first image)
+        let lengthItems = items.length - 1;//index of last image
+        next.onclick = function(){
+            active = active + 1 <= lengthItems ? active + 1 : 0;//var = expression 2(if expression 1 is true) else expression3
+            reloadSlider();
+        }
+        
+        prev.onclick = function(){
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        }
+        let refreshInterval = setInterval(()=> {next.click()}, 3000);
+        function reloadSlider(){
+
+            let checkLeft = items[active].offsetLeft;
+            list.style.left = -checkLeft + 'px';
+            //indicator for which image we are in
+            let lastActiveDot = document.querySelector('.featured_container .dots li.active');
+            lastActiveDot.classList.remove('active');
+            dots[active].classList.add('active');
+
+            /*resets automatic sliding timer every time this function is called so that the images dont
+            change when user clicks the omage change button*/
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(()=> {next.click()}, 3000);
+        }
+        dots.forEach((li, key) => {
+            li.addEventListener('click', () => {
+                active = key;
+                reloadSlider();
+            });
+        });
+
+</script>
+</html>

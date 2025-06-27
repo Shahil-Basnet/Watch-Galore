@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Erick Pradhan,Papit Ghimire,Shahil Basnet,Subin Sapkota">
+        <meta name="description" content="WATCHGALORE WEBSITE">
+        <meta name="keywords" content="watches,HTML,css,SEO,luxury,affordable">
+        <link rel="stylesheet" href="../stylesheets/style.css"> <!--Line 376-755-->
+        <link rel="icon" type="image/x-icon" href="../assets/android-chrome-512x512.png" class="icon1">
+        <title>Products</title>
+        <style>/*internal css*/
+            header{
+                margin:3px 3px;
+                border-radius: 3px;
+            }
+            body{
+                background-color: #f3f2f2;
+            }
+            .icon1{
+                filter: hsl(0, 0%, 100%);
+            }
+            h2 {
+                font-family:'Poppins-Light','Open Sans';
+                font-size: 25px;
+
+            }
+            del{
+                color: tomato;
+
+            }
+            span{
+                color: rgb(17, 126, 5);
+            }
+            p,span{
+                font-family:'Poppins-Light','Open Sans';
+            }
+            .products_cat{
+                margin-top: 30px;
+            }
+            .products_cat h2{
+                font-family:'Poppins-Light','Open Sans';
+                font-size: 40px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+            <header>
+                    <img class="logo" src="../assets/photowatch galore.png" alt="watch" style="width: 150px; height: auto;border-radius: 5px;"><!--Inline css here because if we use the logo somewhere else the dimensions may not be same-->
+                    <nav>
+                        <div class="navigation_bar">
+                            <div class="nav_item"><a href="../index.html">Home</a></div>
+                            <div class="nav_item current_page"><a href="../html/product.html">Products</a></div>
+                            <div class="nav_item"><a href="../html/blog.html">Blog</a></div>
+                            <div class="nav_item"><a href="../html/research.html">Research</a></div>
+                            <div class="nav_item"><a href="../html/aboutUs.html">About Us</a></div>
+                        </div>
+                    </nav>
+                    <a href="./contactus.html" style="margin-right: 10px;"><button class="btn_login">Contact us</button></a>
+            </header>
+            <!--Product categories-->
+            <section class="products_cat">
+                <h2 class="product_title" style="font-family: 'Fancy','Poppins-Light';">Classique</h2>
+
+                <div class="gender">
+                    <div class="male">
+                        <a href="./maleProducts.html"><img src="../assets/menbanner.webp" class="image"></a>
+                        <a href="./maleProducts.html"><div class="text">Men</div></a>
+                    </div>
+                    <div class="female">
+                        <a href="./femaleProducts.html"><img src="../assets/womenbanner.avif" class="image"></a>
+                        <a href="./femaleProducts.html"><div class="text">woMen</div></a>
+                    </div>
+                </div>
+            </section>
+            <section class="products_cat">
+                <h2 class="product_title">Modern</h2>
+
+                <div class="gender">
+                    <div class="male">
+                        <a href="./smartProducts.html"><img src="../assets/smarbanner.avif" class="image"></a>
+                        <a href="./smartProducts.html"><div class="text">Smartwatches</div></a>
+                    </div>
+
+            </section>
+    </body>
+    <!--footer start-->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="../index.html"><img src="../assets/LOGOWATCHGALORE.png"></a></li>
+                        <li style="color: #f3f2f2;margin: 5px;">Watch Galore &#169;</li>
+                        <li style="color: #f3f2f2;margin: 5px;">All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./aboutUs.html">About us</a></li>
+                        <li><a href="./contactus.html">Contact us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AxcMteJkL/" target="_blank"><img src="../assets/icons/facebook.png"> </a>
+                        <a href="https://www.instagram.com/watchgalore?igsh=MXc4Zmt0aW83bnVkcQ==" target="_blank"><img src="../assets/icons/insta.png"></a>
+                        <a href="https://youtube.com/@watchgalore?si=-qo94sligvZuEMcn" target="_blank"><img src="../assets/icons/youtube.png"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</html>

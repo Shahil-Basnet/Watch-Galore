@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Erick Pradhan,Papit Ghimire,Shahil Basnet,Subin Sapkota">
+        <meta name="description" content="WATCHGALORE WEBSITE">
+        <meta name="keywords" content="watches,HTML,css,SEO,luxury,affordable">
+        <link rel="stylesheet" href="../stylesheets/style.css">
+        <link rel="icon" type="image/x-icon" href="../assets/android-chrome-512x512.png" class="icon1">
+        <title>Products</title>
+        <style>
+            header{
+                margin:3px 3px;
+                border-radius: 3px;
+            }
+            body{
+                background-color: #f3f2f2;
+            }
+            .icon1{
+                filter: hsl(0, 0%, 100%);
+            }
+            h2 {
+                font-family:'Poppins-Light','Open Sans';
+                font-size: 25px;
+
+            }
+            del{
+                color: tomato;
+
+            }
+            span{
+                color: rgb(17, 126, 5);
+            }
+            p,span{
+                font-family:'Poppins-Light','Open Sans';
+            }
+            
+        </style>
+    </head>
+    <body>
+            <header>
+                    <img class="logo" src="../assets/photowatch galore.png" alt="watch" style="width: 150px; height: auto;border-radius: 5px;"><!--Inline css here because if we use the logo somewhere else the dimensions may not be same-->
+                    <nav>
+                        <div class="navigation_bar">
+                            <div class="nav_item"><a href="../index.html">Home</a></div>
+                            <div class="nav_item current_page"><a href="../html/product.html">Products</a></div>
+                            <div class="nav_item"><a href="../html/blog.html">Blog</a></div>
+                            <div class="nav_item"><a href="../html/research.html">Research</a></div>
+                            <div class="nav_item"><a href="../html/aboutUs.html">About Us</a></div>
+                        </div>
+                    </nav>
+                    <a href="./contactus.html" style="margin-right: 10px;"><button class="btn_login">Contact us</button></a>
+            </header>
+            <section class="prev_page">
+                <nav style="margin:20px">
+                    <p>&lt;<a href="./product.html">Back to products</a> </p>
+                </nav>
+            </section>
+            <!--Product cards-->
+            <section>
+                    <div class="products_container">
+                        <div class="product_card">  
+                            <img src="../assets/productImages/product5.avif">
+                            <div class="product_info">
+                                <h2>Himalaya</h2><br>
+                                <p>NPR <del>88490</del><span> 88480</span>
+                                    <div class="star-rating">
+                                        ★★★★★<span style="font-size: 15px;color: black;font-family:Cambria, Times, 'Times New Roman', serif">(88)</span>
+                                    </div>
+                                </p>
+                                <div style="margin:-10px 0;">
+                                    <button style="margin: 10px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button><!--Separate--> <a href="./productPages/celebrationecou.html"><button style="margin: 25px 0 0 20px; font-size: 16px;">Description</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_card">  
+                            <img src="../assets/productImages/product3f.avif">
+                            <div class="product_info">
+                                <h2>Egerie Moon</h2><br>
+                                <p>NPR <del>24000</del><span> 14000</span>
+                                    <div class="star-rating">
+                                        ★★☆☆☆<span style="font-size: 15px;color: black;font-family:Cambria, Times, 'Times New Roman', serif">(17)</span>
+                                    </div>
+                                </p>
+                                <div style="margin:-10px 0;">
+                                    <button style="margin: 10px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button><!--Separate--> <a href="./productPages/egerie.html"><button style="margin: 25px 0 0 20px; font-size: 16px;">Description</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_card">  
+                            <img src="../assets/productImages/product4f.png">
+                            <div class="product_info">
+                                <h2>Warrior Lady</h2><br>
+                                <p>NPR <del>20000</del><span> 16999</span>
+                                    <div class="star-rating">
+                                        ★★★★☆<span style="font-size: 15px;color: black;font-family:Cambria, Times, 'Times New Roman', serif">(1)</span>
+                                    </div>
+                                </p>
+                                <div style="margin:-10px 0;">
+                                    <button style="margin: 10px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button><!--Separate--> <a href="./productPages/gurkhalady.html"><button style="margin: 25px 0 0 20px; font-size: 16px;">Description</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_card">  
+                            <img src="../assets/productImages/product2f.avif">
+                            <div class="product_info">
+                                <h2>Traditionelle Perpetual</h2><br>
+                                <p>NPR <span>30000</span>
+                                    <div class="star-rating">
+                                        ★★★★★<span style="font-size: 15px;color: black;font-family:Cambria, Times, 'Times New Roman', serif">(51)</span>
+                                    </div>
+                                </p>
+                                <div style="margin:-10px 0;">
+                                    <button style="margin: 10px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button><!--Separate--> <a href="./productPages/traditionelle.html"><button style="margin: 25px 0 0 20px; font-size: 16px;">Description</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_card">  
+                            <img src="../assets/productImages/product1f.png">
+                            <div class="product_info">
+                                <h2 style="font-size: 23px;">Navitimer Chronograph</h2><br>
+                                <p>NPR <del>59000</del><span> 50000</span>
+                                    <div class="star-rating">
+                                        ★★★★☆<span style="font-size: 15px;color: black;font-family:Cambria, Times, 'Times New Roman', serif">(40)</span>
+                                    </div>
+                                </p>
+                                <div style="margin:-10px 0;">
+                                    <button style="margin: 10px 0 0 5px; font-size: 16px;" onclick="addToCart()">Add to cart</button><!--Separate--> <a href="./productPages/navitimer.html"><button style="margin: 25px 0 0 20px; font-size: 16px;">Description</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+    </body>
+    <!--footer start-->
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="row">
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="../index.html"><img src="../assets/LOGOWATCHGALORE.png"></a></li>
+                        <li style="color: #f3f2f2;margin: 5px;">Watch Galore &#169;</li>
+                        <li style="color: #f3f2f2;margin: 5px;">All rights reserved</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="./aboutUs.html">About us</a></li>
+                        <li><a href="./contactus.html">Contact us</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow us</h4>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/1AxcMteJkL/" target="_blank"><img src="../assets/icons/facebook.png"> </a>
+                        <a href="https://www.instagram.com/watchgalore?igsh=MXc4Zmt0aW83bnVkcQ==" target="_blank"><img src="../assets/icons/insta.png"></a>
+                        <a href="https://youtube.com/@watchgalore?si=-qo94sligvZuEMcn" target="_blank"><img src="../assets/icons/youtube.png"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+</html>
